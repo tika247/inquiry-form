@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index | Inquiry Form</title>
+<link rel="stylesheet" href="/assets/css/init.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="/assets/js/script.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header__inner">
+<h1 class="hdg-1">Inquiry for Services</h1>
+</div>
+</header>
+
+<main class="main">
+<div class="main__inner">
+
+<ol class="step">
+<li class="step__item" aria-current="step"><span>Enter</span></li>
+<li class="step__item"><span>Confirm</span></li>
+<li class="step__item"><span>Complete</span></li>
+</ol>
+
+<div class="hdg-2-wrap">
+<h2 class="hdg-2">Enter the form below</h2>
+</div>
+
+<ul class="note">
+<li class="note__item">note1</li>
+<li class="note__item">note2</li>
+<li class="note__item">note3</li>
+<li class="note__item">note4</li>
+</ul>
+
+<form action="/confirm" method="POST" class="form js-form">
+<div class="form__inner">
+
+<ul class="form__list">
+
+<li class="form__item">
+<label for="data-service" class="form__name">Service<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<select name="data-service" id="data-service" class="form__select" required>
+<option value="">選択してください</option>
+<option value="Service-1">Service-1</option>
+<option value="Service-2">Service-2</option>
+<option value="Service-3">Service-3</option>
+</select>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="data-contents" class="form__name">Contents<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<textarea name="data-contents" id="data-contents" rows="5" class="form__textarea" required></textarea>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Name<span aria-hidden="true">*</span></div>
+<div class="form__contents">
+<div class="form__wrap">
+<div class="form__group">
+<label for="data-first-name" class="form__miniLabel">First Name</label>
+<input type="text" id="data-first-name" required>
+</div><!-- form__group -->
+<div class="form__group">
+<label for="data-last-name" class="form__miniLabel">Last Name</label>
+<input type="text" id="data-last-name" required>
+</div><!-- form__group -->
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="data-occupation" class="form__name">Occupation</label>
+<div class="form__contents">
+<select name="data-occupation" id="data-occupation" class="form__select">
+<option value="">選択してください</option>
+<option value="occupation-1">occupation-1</option>
+<option value="occupation-2">occupation-2</option>
+<option value="occupation-3">occupation-3</option>
+</select>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Address</div>
+<div class="form__contents">
+<div class="form__group">
+<label for="data-street-address" class="form__miniLabel">Street Address</label>
+<input type="text" id="data-street-address">
+</div>
+<div class="form__group">
+<label for="data-street-address-line2" class="form__miniLabel">Street Address Line2</label>
+<input type="text" id="data-street-address-line2">
+</div>
+<div class="form__wrap">
+<div class="form__group">
+<label for="data-city" class="form__miniLabel">City</label>
+<input type="text" id="data-city">
+</div><!-- form__group -->
+<div class="form__group">
+<label for="data-state-province" class="form__miniLabel">State / Province</label>
+<input type="text" id="data-state-province">
+</div><!-- form__group -->
+<div class="form__group">
+<label for="data-postal-zipCode" class="form__miniLabel">Postal / Zip Code</label>
+<input type="text" id="data-postal-zipCode">
+</div><!-- form__group -->
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Phone<span aria-hidden="true">*</span></div>
+<div class="form__contents">
+<div class="form__wrap">
+<div class="form__group">
+<label for="data-area-code" class="form__miniLabel">Area Code</label>
+<input type="text" id="data-area-code" required>
+</div><!-- form__group -->
+<div class="form__group">
+<label for="data-individual-number" class="form__miniLabel">Individual Number<small>*No space needed</small></label>
+<input type="text" id="data-individual-number" required>
+</div><!-- form__group -->
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="data-email" class="form__name">Email<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<input type="text" id="data-email" required>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="data-reenter-email" class="form__name">Re-enter <br class="br-pc">Email<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<input type="text" id="data-reenter-email" required>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+</ul><!-- form__list -->
+
+<button type="submit" class="form__btn fn-form-btn" disabled>Confirm</button>
+
+</div>
+</form>
+
+</div>
+</main>
+
+</body>
+</html>

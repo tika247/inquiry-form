@@ -1,0 +1,14 @@
+{
+    "require": {
+      "phpmailer/phpmailer": "v6.8.0",
+      "smarty/smarty": "^4.3"
+    },
+    "autoload": {
+      "psr-4": {
+        "controller\\": "app/controller",
+        "model\\": "app/model",
+        "Smarty\\": "vender/smarty/smarty",
+        "PHPMailer\\": "vender/phpmailer/phpmailer"
+      }
+  }
+}

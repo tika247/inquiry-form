@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Index | Inquiry Form</title>
+<link rel="stylesheet" href="/assets/css/init.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="/assets/js/script.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="header__inner">
+<h1 class="hdg-1">Inquiry for Services</h1>
+</div>
+</header>
+
+<main class="main">
+<div class="main__inner">
+
+<ol class="step">
+<li class="step__item" aria-current="step"><span>Enter</span></li>
+<li class="step__item"><span>Confirm</span></li>
+<li class="step__item"><span>Complete</span></li>
+</ol>
+
+<div class="hdg-2-wrap">
+<h2 class="hdg-2">Enter the form below</h2>
+</div>
+
+<ul class="note">
+<li class="note__item">note1</li>
+<li class="note__item">note2</li>
+<li class="note__item">note3</li>
+<li class="note__item">note4</li>
+</ul>
+
+{if isset($is_error) && isset($error_list)}
+{if $error_list|@count === 1}
+<p><strong>Error is thrown. Fix it and submit again.</strong></p>
+{else}
+<p><strong>Errors are thrown. Fix them and submit again.</strong></p>
+{/if}
+<ul>
+{foreach item="item" from=$error_list}
+<li><p><strong>{$item}</p></strong></li>
+{/foreach}
+</ul>
+{/if}
+
+<form action="/" method="POST" class="form js-form">
+<input type="hidden" name="target_page" value="confirm">
+
+<div class="form__inner">
+
+<ul class="form__list">
+
+<li class="form__item">
+<label for="service" class="form__name">Service<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<select name="service" id="service" class="form__select{if isset($errors_service)} error{/if}" required>
+<option value="">選択してください</option>
+{html_options options=$service_list selected=$service|default:'0'}
+</select>
+</div><!-- form__contents -->
+{if isset($errors_service)}
+{foreach item="item" from=$errors_service}
+<p class="error-text">{$item}</p>
+{/foreach}
+{/if}
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="contents" class="form__name">Contents<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<textarea name="contents" id="contents" rows="5" class="form__textarea{if isset($errors_contents)} error{/if}" required>{$contents|default:''}</textarea>
+</div><!-- form__contents -->
+{if isset($errors_contents)}
+{foreach item="item" from=$errors_contents}<p class="error-text">{$item}</p>{/foreach}
+{/if}
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Name<span aria-hidden="true">*</span></div>
+<div class="form__contents">
+<div class="form__wrap">
+<div class="form__group">
+<label for="name1" class="form__miniLabel">First Name</label>
+<input type="text" id="name1" name="name1" value="{$name1|default:''}"{if isset($errors_name1)} class="error"{/if} required>
+{if isset($errors_name1)}
+{foreach item="item" from=$errors_name1}<p class="error-text">{$item}</p>{/foreach}
+{/if}
+</div><!-- form__group -->
+<div class="form__group">
+<label for="name2" class="form__miniLabel">Last Name</label>
+<input type="text" id="name2" name="name2" value="{$name2|default:''}"{if isset($errors_name2)} class="error"{/if} required>
+{if isset($errors_name2)}
+{foreach item="item" from=$errors_name2}<p class="error-text">{$item}</p>{/foreach}
+{/if}
+</div><!-- form__group -->
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="occupation" class="form__name">Occupation</label>
+<div class="form__contents">
+<select name="occupation" id="occupation" class="form__select{if isset($errors_occupation)} error{/if}">
+<option value="">選択してください</option>
+{html_options options=$occupation_list selected=$occupation|default:'0'}
+</select>
+</div><!-- form__contents -->
+{if isset($errors_occupation)}
+{foreach item="item" from=$errors_occupation}
+<p class="error-text">{$item}</p>
+{/foreach}
+{/if}
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Address</div>
+<div class="form__contents">
+<div class="form__group">
+<label for="address1" class="form__miniLabel">Street Address</label>
+<input type="text" id="address1" name="address1" value="{$address1|default:''}">
+</div>
+<div class="form__group">
+<label for="address2" class="form__miniLabel">Street Address Line2</label>
+<input type="text" id="address2" name="address2" value="{$address2|default:''}">
+</div>
+<div class="form__wrap">
+<div class="form__group">
+<label for="address3" class="form__miniLabel">City</label>
+<input type="text" id="address3" name="address3" value="{$address3|default:''}">
+</div><!-- form__group -->
+<div class="form__group">
+<label for="address4" class="form__miniLabel">State / Province</label>
+<input type="text" id="address4" name="address4" value="{$address4|default:''}">
+</div><!-- form__group -->
+<div class="form__group">
+<label for="address5" class="form__miniLabel">Postal / Zip Code</label>
+<input type="text" id="address5" name="address5" value="{$address5|default:''}">
+</div><!-- form__group -->
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+{if isset($errors_address)}
+{foreach item="item" from=$errors_address}
+<p class="error-text">{$item}</p>
+{/foreach}
+{/if}
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Phone<span aria-hidden="true">*</span></div>
+<div class="form__contents">
+<div class="form__wrap">
+<div class="form__group">
+<label for="phone1" class="form__miniLabel">Area Code</label>
+<input type="text" id="phone1" name="phone1" value="{$phone1|default:''}"{if isset($errors_phone)} class="error"{/if} required>
+</div><!-- form__group -->
+<div class="form__group">
+<label for="phone2" class="form__miniLabel">Individual Number<small>*No space needed</small></label>
+<input type="text" id="phone2" name="phone2" value="{$phone2|default:''}"{if isset($errors_phone)} class="error"{/if} required>
+</div><!-- form__group -->
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+{if isset($errors_phone)}
+{foreach item="item" from=$errors_phone}
+<p class="error-text">{$item}</p>
+{/foreach}
+{/if}
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="email" class="form__name">Email<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<input type="text" id="email" name="email" value="{$email|default:''}" required>
+</div><!-- form__contents -->
+{if isset($errors_email)}
+{foreach item="item" from=$errors_email}
+<p class="error-text">{$item}</p>
+{/foreach}
+{/if}
+</li><!-- form__item -->
+
+<li class="form__item">
+<label for="email2" class="form__name">Re-enter <br class="br-pc">Email<span aria-hidden="true">*</span></label>
+<div class="form__contents">
+<input type="text" id="email2" name="email2" value="{$email2|default:''}" required>
+</div><!-- form__contents -->
+{if isset($errors_email2)}
+{foreach item="item" from=$errors_email2}
+<p class="error-text">{$item}</p>
+{/foreach}
+{/if}
+</li><!-- form__item -->
+
+</ul><!-- form__list -->
+
+<button type="submit" class="form__btn fn-form-btn" disabled>Confirm</button>
+
+</div>
+</form>
+
+</div>
+</main>
+
+</body>
+</html>

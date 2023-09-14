@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+:root {
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  --family: "Roboto", "Hiragino Kaku Gothic Pro", "Yu Gothic Medium", "游ゴシック Medium", yugothic, "游ゴシック体", meiryo, sans-serif;
+  --inner-width: 900px;
+  --gutter: 20px;
+  --color-01: #707070;
+  --color-02: #333333;
+  --color-03: #dedede;
+  --color-04: #204793;
+  --color-05: #808794;
+  --color-06: #e20000;
+  --color-07: #4873d1;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+  word-break: break-all;
+}
+html, body {
+  height: 100%;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  letter-spacing: .05em;
+  color: var(--color-01);
+  font-family: var(--family);
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+img {
+    height: auto;
+    vertical-align: bottom;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-02);
+}
+a {
+  text-decoration: none;
+}
+em {
+  font-style: normal;
+}  
+ul,
+ol {
+    list-style: none;
+}
+button {
+  display: block;
+  cursor: pointer;
+}
+button, fieldset {
+  background-color: transparent;
+  border: none;
+}
+dialog {
+  border: none;
+  overflow: inherit;
+}
+
+/* PC
+----------------------------------------------- */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+  }
+}

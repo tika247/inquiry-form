@@ -1,0 +1,29 @@
+admin
+
+お問い合わせ製品
+{$category_list[$category] nofilter}
+
+お問い合わせ内容
+{$content|my_wordwrap nofilter}
+
+氏名
+{$name1 nofilter} {$name2 nofilter}
+
+ふりがな
+{$kana1 nofilter} {$kana2 nofilter}
+
+会社名
+{$company nofilter}
+
+ご連絡先住所
+{$zip1 nofilter}-{$zip2 nofilter}
+{$pref_list[$pref] nofilter}{$address nofilter}
+
+電話番号
+{$tel1 nofilter}-{$tel2 nofilter}-{$tel3 nofilter}
+
+FAX番号
+{$fax1 nofilter}-{$fax2 nofilter}-{$fax3 nofilter}
+
+メールアドレス
+{$email nofilter}

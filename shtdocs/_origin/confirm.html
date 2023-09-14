@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirm | Inquiry Form</title>
+<link rel="stylesheet" href="/assets/css/init.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="confirm">
+<header class="header">
+<div class="header__inner">
+<h1 class="hdg-1">Inquiry for Services</h1>
+</div>
+</header>
+
+<main class="main">
+<div class="main__inner">
+
+<ol class="step">
+<li class="step__item"><span>Enter</span></li>
+<li class="step__item" aria-current="step"><span>Confirm</span></li>
+<li class="step__item"><span>Complete</span></li>
+</ol>
+
+<div class="hdg-2-wrap">
+<h2 class="hdg-2">Confirm the entered below</h2>
+</div>
+
+<form action="/complete" method="POST" class="form --confirm">
+<div class="form__inner">
+
+<ul class="form__list">
+
+<li class="form__item">
+<em for="data-service" class="form__name">Service</em>
+<div class="form__contents">
+<span>Service-1</span>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<em for="data-contents" class="form__name">Contents</em>
+<div class="form__contents">
+<span>Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents Contents</span>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Name</div>
+<div class="form__contents">
+<div class="form__wrap">
+<span>Takahiro</span>
+<span>Nishina</span>
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<em for="data-occupation" class="form__name">Occupation</em>
+<div class="form__contents">
+<span>occupation-1</span>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Address</div>
+<div class="form__contents">
+<span>Street Address</span>
+<span>Street Address Line2</span>
+<div class="form__wrap">
+<span>City</span>
+<span>State / Province</span>
+<span>Postal / Zip Code</span>
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<div class="form__name">Phone</div>
+<div class="form__contents">
+<div class="form__wrap">
+<span>Area Code</span>
+<span>Individual Number</span>
+</div><!-- form__wrap -->
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<em for="data-email" class="form__name">Email</em>
+<div class="form__contents">
+<span>Email</span>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+<li class="form__item">
+<em for="data-reenter-email" class="form__name">Re-enter <br class="br-pc">Email</em>
+<div class="form__contents">
+<span>Email</span>
+</div><!-- form__contents -->
+</li><!-- form__item -->
+
+</ul><!-- form__list -->
+
+<div class="form__btnWrap">
+<a href="/" class="form__btn --back">Back</a>
+<button type="submit" class="form__btn">Submit</button>
+</div>
+
+</div>
+</form>
+
+</div>
+</main>
+
+</body>
+</html>
