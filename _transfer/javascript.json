@@ -1,0 +1,83 @@
+{
+	"Filter": {
+	  "prefix": "fil",
+	  "body": [
+		"const arr = ['a', 'b', 'c'];",
+		"const result = arr.filter((str) => str === 'b');",
+		"console.log(result); // ['b']",
+	  ]
+	},
+	"Find": {
+	  "prefix": "fin",
+	  "body": [
+		"const arr = [1, 2, 3];",
+		"const result = arr.find((num) => num > 1);",
+		"console.log(result); // 2",
+	  ]
+	},
+	"Map": {
+	  "prefix": "map",
+	  "body": [
+		"const arr = [1, 2, 3];",
+		"const result = arr.map((num) => num * 2);",
+		"console.log(result); // [2, 4, 6]",
+	  ]
+	},
+	"Class-Syntacs": {
+	  "prefix": "c",
+	  "body": [
+		"class Sample {",
+		"  constructor() {}",
+		"  init() {}",
+		"}",
+	  ]
+	},
+	"flex-row": {
+	  "prefix": "fl",
+	  "body": [
+		"display: flex;",
+		"justify-content: center;",
+		"align-items: center;"
+	  ]
+	},
+	"flex-column": {
+	  "prefix": "fc",
+	  "body": [
+		"display: flex;",
+		"flex-direction: column;",
+		"justify-content: center;",
+		"align-items: center;"
+	  ]
+	},
+	"trans": {
+	  "prefix": "trans",
+	  "body": [
+		"top: 50%;",
+		"left: 50%;",
+		"transform: translate(-50%, -50%);"
+	  ]
+	},
+	"divide": {
+	  "prefix": "/",
+	  "body": [
+		"/750*100vw"
+	  ]
+	},
+	"margin0auto": {
+	  "prefix": "m",
+	  "body": [
+		"margin: 0 auto;"
+	  ]
+	},
+	"background-image": {
+	  "prefix": "b",
+	  "body": [
+		"width:;",
+		"height:;",
+		"background-image: url('/assets/img/$1');",
+		"background-size: contain;",
+		"background-position: center center;",
+		"background-repeat: no-repeat;"
+	  ]
+	}
+  }

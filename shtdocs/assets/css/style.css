@@ -250,6 +250,16 @@
     transform: translateY(-50%) rotate(45deg);
 }
 
+.form__error {    
+    margin-top: 8px;
+    white-space: nowrap;
+}
+
+.form__error > strong {  
+    font-weight: 500;
+    color: var(--color-06);
+}
+
 /* PC
 ----------------------------------------------- */
 @media (min-width: 768px) {
