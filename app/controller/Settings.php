@@ -66,20 +66,20 @@ class Settings
         }
     
         // TODO: change for 'domain'
-        if (preg_match('/\.mitsue\.(co\.jp|com)$/', $host_name))
+        if (preg_match('/\.dummy\.(co\.jp|com)$/', $host_name))
         {
             $environment = 'dev';
-            error_reporting($this->settings['ERROR_REPORT']['dev']);
+            error_reporting((int)$this->settings['ERROR_REPORT']['dev']);
         }
         elseif (preg_match('/\.domain\.co\.jp$/', $host_name))
         {
             $environment = 'stage';
-            error_reporting($this->settings['ERROR_REPORT']['pro']);
+            error_reporting((int)$this->settings['ERROR_REPORT']['pro']);
         }
         else
         {
             $environment = 'live';
-            error_reporting($this->settings['ERROR_REPORT']['pro']);
+            error_reporting((int)$this->settings['ERROR_REPORT']['pro']);
         }
         
         $dependency = parse_ini_file($this->dependencyPath . strtolower($environment) . '.ini', true);
