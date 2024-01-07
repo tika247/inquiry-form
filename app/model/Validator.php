@@ -342,7 +342,7 @@ class Validator
     protected function phone2Column(array $params, array $o = [], array $label = [])
     {
         // 2 numbers
-        if (strlen($params[$o['target_array'][0]]) && !preg_match('/^[0-9]{2}$/', $params[$o['target_array'][0]]))
+        if (strlen($params[$o['target_array'][0]]) && !preg_match('/^[0-9]{3}$/', $params[$o['target_array'][0]]))
         {
             return $o['message'] . $this->message['phone'];
         }
